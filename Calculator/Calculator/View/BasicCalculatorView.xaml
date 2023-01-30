@@ -1,0 +1,212 @@
+﻿<UserControl x:Class="Calculator.View.BasicCalculatorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Calculator.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <!--<Label HorizontalAlignment="Left" Margin="160,134,0,0" VerticalAlignment="Top" Content="{Binding CurrentTime}"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="179,189,0,0" VerticalAlignment="Top" Command="{Binding ShowTimeCommand}"/>-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <Label
+                Height="38"
+                HorizontalAlignment="Right"
+                Background="White" 
+                Content="{Binding Result}"
+                Grid.RowSpan="2"
+                />
+
+            <Label
+                Height="38"
+                HorizontalAlignment="Right"
+                Content="{Binding Number}"
+                Background="White" 
+                />
+        </StackPanel>
+
+
+
+        <Grid Grid.Row="2" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <Button 
+                Grid.Row="0"
+                Grid.Column="0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Content="1"
+                Command="{Binding ButtonCommand}"
+                CommandParameter="1"
+                />
+
+            <Button 
+                Grid.Row="0"
+                Grid.Column="1"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Content="2"
+                Command="{Binding ButtonCommand}"
+                CommandParameter="2"
+                />
+
+            <Button 
+                Grid.Row="0"
+                Grid.Column="2"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Content="3"
+                Command="{Binding ButtonCommand}"
+                CommandParameter="3"
+                />
+
+            <Button 
+                Grid.Row="0"
+                Grid.Column="3"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Content="+"
+                Command="{Binding OperatorCommand}"
+                CommandParameter="+"
+                />
+
+            <Button 
+                Grid.Row="1"
+                Grid.Column="0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Content="4"
+                Command="{Binding ButtonCommand}"
+                CommandParameter="4"
+                />
+
+            <Button 
+                Grid.Row="1"
+                Grid.Column="1"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Content="5"
+                Command="{Binding ButtonCommand}"
+                CommandParameter="5"
+                />
+
+            <Button 
+                Grid.Row="1"
+                Grid.Column="2"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Content="6"
+                Command="{Binding ButtonCommand}"
+                CommandParameter="6"
+                />
+
+            <Button 
+                Grid.Row="1"
+                Grid.Column="3"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Content="-"
+                Command="{Binding OperatorCommand}"
+                CommandParameter="-"
+                />
+
+            <Button 
+                Grid.Row="2"
+                Grid.Column="0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Content="7"
+                Command="{Binding ButtonCommand}"
+                CommandParameter="7"
+                />
+
+            <Button 
+                Grid.Row="2"
+                Grid.Column="1"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Content="8"
+                Command="{Binding ButtonCommand}"
+                CommandParameter="8"
+                />
+
+            <Button 
+                Grid.Row="2"
+                Grid.Column="2"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Content="9"
+                Command="{Binding ButtonCommand}"
+                CommandParameter="9"
+                />
+
+            <Button 
+                Grid.Row="2"
+                Grid.Column="3"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Content="*"
+                Command="{Binding OperatorCommand}"
+                CommandParameter="*"
+                />
+
+            <Button 
+                Grid.Row="3"
+                Grid.Column="0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Content="."
+                Command="{Binding ButtonCommand}"
+                CommandParameter="."
+                />
+
+            <Button 
+                Grid.Row="3"
+                Grid.Column="1"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Content="0"
+                Command="{Binding ButtonCommand}"
+                CommandParameter="0"
+                />
+
+            <Button 
+                Grid.Row="3"
+                Grid.Column="2"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Content="="
+                CommandParameter="7"
+                />
+
+            <Button 
+                Grid.Row="3"
+                Grid.Column="3"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Content="/"
+                Command="{Binding OperatorCommand}"
+                CommandParameter="/"
+                />
+
+        </Grid>
+    </Grid>
+</UserControl>
